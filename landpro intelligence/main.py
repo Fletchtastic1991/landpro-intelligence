@@ -32,11 +32,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",    # Next.js frontend (future)
-        "http://localhost:5173",    # Vite frontend (current)
-        "http://localhost:5174",    # Vite sometimes uses this port too
-    ],
+    allow_origins=["*"],  # Allow all origins (for development). Change this in production!
     allow_credentials=True,
     allow_methods=["*"],    # Allow GET, POST, PUT, DELETE, etc.
     allow_headers=["*"],    # Allow any headers
