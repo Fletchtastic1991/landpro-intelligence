@@ -1,0 +1,55 @@
+Decision 1: LandPro is a platform, not just an app
+
+Context: Confusion about whether LandPro was “just SitePro” or something larger
+Decision: LandPro is the parent platform; SitePro is the first product built on top of it
+Why: This preserves long-term flexibility and avoids locking intelligence into a single UI
+Revisit?: No (unless abandoning multi-product vision)
+
+Decision 2: LandPro Core already exists
+
+Context: Concern about being stalled or “not far enough”
+Decision: LandPro Core exists today in an early but real form
+Why: Canonical data models, decision logic, workflows, and learning loops are already present
+Revisit?: No
+
+Decision 3: SitePro is a “lens” over LandPro Core
+
+Context: Confusion around core/SiteProSection.ts
+Decision: SitePro is a thin presentation layer that consumes LandPro Core; it does not define it
+Why: Prevents tight coupling and allows future products to reuse the same intelligence
+Revisit?: No
+
+Decision 4: LandPro Core must not reference product-specific concepts
+
+Context: File naming and folder structure discussion
+Decision: LandPro Core cannot reference SitePro (or any future product) by name
+Why: Core must remain product-agnostic to function as a true platform
+Revisit?: No
+
+Decision 5: One domain, one brand, early-stage
+
+Context: Discussion about domains and spending money
+Decision: LandPro will operate under a single domain (getlandpro.app) with subdomains or paths for products
+Why: Reduces complexity, cost, and cognitive load before revenue
+Revisit?: Yes (after revenue or multiple products)
+
+Decision 6: Do not form an LLC or business entity yet
+
+Context: Questions about when to “make it official”
+Decision: Delay LLC, bank accounts, and accounting until revenue or payment intent exists
+Why: Avoids premature overhead and false progress
+Revisit?: Yes (triggered by first payment or contract)
+
+Decision 7: Infrastructure is replaceable; core logic is not
+
+Context: AWS vs “owning your own AWS”
+Decision: LandPro will not build infrastructure; it will own decisions, data, and domain expertise
+Why: Defensibility comes from domain intelligence, not servers
+Revisit?: No
+
+Decision 8: Preserve original ideas before refactoring
+
+Context: Fear of forgetting earlier notes and ideas
+Decision: All original thinking will be frozen in a read-only vision file before restructuring
+Why: Prevents accidental loss of meaning and founder burnout
+Revisit?: No
